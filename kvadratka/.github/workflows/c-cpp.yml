@@ -1,0 +1,21 @@
+permissions: write-all
+name: kvadratka integration
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make prepare
+      run: make prepare
+    - name: compile
+      run: make main
+  

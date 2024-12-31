@@ -1,0 +1,1 @@
+savedcmd_/home/senyaa/mipt/ded/kernel_stack/kernel_stack.mod := printf '%s\n'   kernel_stack.o | awk '!x[$$0]++ { print("/home/senyaa/mipt/ded/kernel_stack/"$$0) }' > /home/senyaa/mipt/ded/kernel_stack/kernel_stack.mod

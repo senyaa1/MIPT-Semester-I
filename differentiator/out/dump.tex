@@ -1,0 +1,100 @@
+\documentclass[12pt,a4paper]{extreport}
+\input{style}
+\title{<<Самостоятельная работа по вычислению производных высших порядков>>}
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Вступление}
+В первом классе советской школы математика была не просто предметом, а боевым рубежом. Пока загнивающий Запад в детских садах изучал цвета радуги и делал поделки из макарон, наши первоклассники уже знали, что дифференцировать функции — это не прихоть, а вопрос государственной важности. С урока сразу на доске красовалось грозное: “ДЕРИВАТЫ — старшие братья численных рядов!”. Мелом, быстро и четко. 
+
+Учительница Мария Ивановна, с легким прищуром и неотразимой верой в светлое будущее, объясняла суть производной на примере сбора картошки: “Если Ваня копает одну сотку за 10 минут, а Петя — за 5 минут, то чья производная выше?”. Кто не понимал, оставался после уроков считать частные производные по полям кукурузы.
+
+
+
+Зато к концу первой четверти маленькие дифференциаторы могли находить скорость распространения слухов в очереди за колбасой, а на переменах спорили о втором законе Ньютона, пока взрослые стояли в очереди за учебниками. Такие времена, такой уровень. И если кто-то на вопрос “Чему равна производная синуса?” пытался сказать “Что такое синус?”, его тут же отправляли в третий класс — в народное хозяйство стране помощники нужны!\section{Вычисление}
+
+
+Давайте продифференцируем данную легчайшую функцию.
+
+\begin{dmath*}
+f(x) = \sin(15 \cdot {x}^{3}) + ({\cos(10 \cdot x + 5))}^{3}
+\end{dmath*}
+
+Вычислим 1-ую производную:
+
+\begin{dmath*}
+f^{(1)}(x) = \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} + 3 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot ({\cos(10 \cdot x + 5))}^{2}
+\end{dmath*}
+Давайте немного упростим данное выражение.
+
+
+Получаем 1-ую производную:
+
+\begin{dmath*}
+f^{(1)}(x) = \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} + 3 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot ({\cos(10 \cdot x + 5))}^{2}
+\end{dmath*}
+
+Вычислим 2-ую производную:
+
+\begin{dmath*}
+f^{(2)}(x) = \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} + 0 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot ({\cos(10 \cdot x + 5))}^{2} + 3 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot ({\cos(10 \cdot x + 5))}^{1}
+\end{dmath*}
+Давайте немного упростим данное выражение.
+
+
+Получаем 2-ую производную:
+
+\begin{dmath*}
+f^{(2)}(x) = \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 90 \cdot x + 3 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5)
+\end{dmath*}
+
+Вычислим 3-ую производную:
+
+\begin{dmath*}
+f^{(3)}(x) = \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} \cdot -1 + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 0 \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot -1 \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot x + 90 \cdot 1 + 0 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + 3 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot -100 + \cos(10 \cdot x + 5) \cdot 0 \cdot ({\cos(10 \cdot x + 5))}^{2} + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot ({\cos(10 \cdot x + 5))}^{1} + \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot 0 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + 2 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1
+\end{dmath*}
+Давайте немного упростим данное выражение.
+
+
+Получаем 3-ую производную:
+
+\begin{dmath*}
+f^{(3)}(x) = \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 90 + 3 \cdot \sin(10 \cdot x + 5) \cdot 1000 \cdot ({\cos(10 \cdot x + 5))}^{2} + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10
+\end{dmath*}
+
+Вычислим 4-ую производную:
+
+\begin{dmath*}
+f^{(4)}(x) = \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot x + 90 \cdot 1 \cdot -1 + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot 0 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} \cdot -1 + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 0 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 0 \cdot x + 90 \cdot 1 + \cos(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{2} + 45 \cdot 2 \cdot {x}^{2 - 1} \cdot -1 + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 0 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 0 \cdot x + 90 \cdot 1 + \sin(15 \cdot {x}^{3}) \cdot 0 \cdot {x}^{3} + 15 \cdot 3 \cdot {x}^{3 - 1} \cdot -1 \cdot 90 + \cos(15 \cdot {x}^{3}) \cdot 0 + 0 \cdot \sin(10 \cdot x + 5) \cdot 1000 \cdot ({\cos(10 \cdot x + 5))}^{2} + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + 3 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot 1000 + \sin(10 \cdot x + 5) \cdot 0 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot ({\cos(10 \cdot x + 5))}^{1} + \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot -100 + \cos(10 \cdot x + 5) \cdot 0 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 0 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + 2 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 + \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot -100 + \cos(10 \cdot x + 5) \cdot 0 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 0 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + 2 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 + \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot 0 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + 2 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 \cdot -100 + \cos(10 \cdot x + 5) \cdot 0 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot \sin(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -1 + \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) \cdot 0 \cdot x + 10 \cdot 1 + 0 \cdot -10 + \sin(10 \cdot x + 5) \cdot 0
+\end{dmath*}
+Давайте немного упростим данное выражение.
+
+
+Получаем 4-ую производную:
+
+\begin{dmath*}
+f^{(4)}(x) = \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + 3 \cdot \cos(10 \cdot x + 5) \cdot 10000 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot 1000 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot \sin(10 \cdot x + 5) \cdot -10 + \cos(10 \cdot x + 5) \cdot -100 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) \cdot -100
+\end{dmath*}
+\section{Заключение}
+Наша функция и полученная производная:
+
+
+\begin{dmath*}
+f(x) = \sin(15 \cdot {x}^{3}) + ({\cos(10 \cdot x + 5))}^{3}
+\end{dmath*}
+
+\begin{dmath*}
+f^{(4)}(x) = \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot -1 \cdot 45 \cdot {x}^{2} + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + \cos(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot 45 \cdot {x}^{2} + \sin(15 \cdot {x}^{3}) \cdot 90 \cdot x \cdot -1 \cdot 90 \cdot x + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + \sin(15 \cdot {x}^{3}) \cdot 45 \cdot {x}^{2} \cdot -90 + 3 \cdot \cos(10 \cdot x + 5) \cdot 10000 \cdot ({\cos(10 \cdot x + 5))}^{2} + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot 1000 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \cos(10 \cdot x + 5) \cdot -100 \cdot 2 \cdot \cos(10 \cdot x + 5) \cdot -100 \cdot \cos(10 \cdot x + 5) + \sin(10 \cdot x + 5) \cdot -10 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot 2 \cdot \sin(10 \cdot x + 5) \cdot 1000 \cdot \cos(10 \cdot x + 5) + \cos(10 \cdot x + 5) \cdot -100 \cdot \sin(10 \cdot x + 5) \cdot -10 + \cos(10 \cdot x + 5) \cdot -100 \cdot \sin(10 \cdot x + 5) \cdot -10 + \sin(10 \cdot x + 5) \cdot -10 \cdot \cos(10 \cdot x + 5) \cdot -100
+\end{dmath*}
+
+
+Несложно заметить, что графики выглядят так:
+
+\begin{minipage}{0.45\textwidth}
+\centering\includegraphics[width=\linewidth]{out/orig_plot.png}\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering\includegraphics[width=\linewidth]{out/optimized_plot.png}\end{minipage}
+\end{document}

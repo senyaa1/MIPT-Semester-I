@@ -1,0 +1,4 @@
+\selectlanguage *[]{russian}
+\contentsline {section}{\numberline {I}Вступление}{2}{section.0.1}%
+\contentsline {section}{\numberline {II}Вычисление}{2}{section.0.2}%
+\contentsline {section}{\numberline {III}Заключение}{4}{section.0.3}%

@@ -1,0 +1,4 @@
+# Vulns
+ - stack_chk doesn't check if buf is NULL, passes tests if it does
+ - hash is not computed in the first bytes of buf
+ - first struct and first buf canary is not checked

@@ -1,0 +1,1 @@
+savedcmd_/home/senyaa/mipt/ded/kernel_stack/Module.symvers :=  scripts/mod/modpost -M  -a    -N  -o /home/senyaa/mipt/ded/kernel_stack/Module.symvers -n -T /home/senyaa/mipt/ded/kernel_stack/modules.order -i Module.symvers -e 

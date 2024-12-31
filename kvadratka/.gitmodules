@@ -1,0 +1,3 @@
+[submodule "kvadratest"]
+	path = kvadratest
+	url = git@github.com:senyaa1/kvadratest

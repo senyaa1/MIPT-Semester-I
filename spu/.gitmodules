@@ -1,0 +1,3 @@
+[submodule "cpu/lib/stack"]
+	path = cpu/lib/stack
+	url = git@github.com:senyaa1/stack

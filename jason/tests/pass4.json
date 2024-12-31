@@ -1,0 +1,15 @@
+{
+	"person": {
+		"name": "Jane",
+		"address": {
+			"street": "123 Main St",
+			"city": "Anytown",
+			"sus": "amogus",
+			"cnt": 2
+		}
+	},
+	"hobbies": [
+		"reading",
+		"swimming"
+	]
+}
